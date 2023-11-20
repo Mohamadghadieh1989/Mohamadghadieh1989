@@ -1,0 +1,37 @@
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class ExhibitionPlayer : NetworkBehaviour
+{
+    // This script will control the player's interactions in the virtual exhibition
+
+    // Implement your player's movement and interaction logic here
+
+    void Start()
+    {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        // Implement spawning and controlling of player object for the local player
+    }
+
+    // Example interaction method
+    void InteractWithObject(GameObject obj)
+    {
+        // Implement the logic when a player interacts with an object in the exhibition
+    }
+}
+
+public class ExhibitionObject : NetworkBehaviour
+{
+    // This script will control the interactive objects in the virtual exhibition
+
+    // Implement object behavior, e.g., when a player interacts with it
+
+    void OnPlayerInteract(GameObject player)
+    {
+        // Implement the logic when a player interacts with this object
+    }
+}
